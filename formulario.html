@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <script src="formulario.js"></script>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+    <h1>FORMULARIO</h1>
+    <form id="formulario" method="get">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" minlength="3" maxlength="15" pattern="[A-Za-z\']+" required>
+            <span id="nombre-error" class="error">Campo obligatorio</span>
+        </div>
+        
+        <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" minlength="3" maxlength="15" pattern="[A-Za-z\s]+" required>
+            <span id="apellido-error" class="error">Campo obligatorio</span>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <span id="email-error" class="error">Campo obligatorio</span>
+        </div>
+        
+        <div>
+            <label for="fecha_nac">Fecha Nacimiento:</label>
+            <input type="date" name="fecha_nac" id="fecha_nac" required>
+            <span id="fecha_nac-error" class="error">Campo obligatorio</span>
+        </div>
+
+        <div>
+            <label for="pais">País residencia:</label>
+            <input type="text" name="pais" id="pais" minlength="3" maxlength="15" required>
+            <span id="pais-error" class="error">Campo obligatorio</span>
+        </div>
+        
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div class="estilos-botones">
+        <button onclick="setClassicStyle()">Estilo Clásico</button>
+        <button onclick="setHighContrastStyle()">Estilo Alto Contraste</button>
+    </div>
+    
+</body>
