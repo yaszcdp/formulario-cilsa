@@ -1,3 +1,5 @@
+
+
 /*ESTILOS GENERALES*/
 html {
     box-sizing: border-box;
@@ -10,21 +12,89 @@ html {
     box-sizing: inherit;
 }
 
+body{
+    background-image: url(/img/topographicbackground.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    width: 100%;
+    height: 7vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+main{
+    margin-top: 2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffffd0;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+p{
+    margin-top: 2rem;
+    padding: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+hr{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: .1rem solid #6d6d6d;
+}
+
 /*BASICOS*/
 h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2.5rem;
     align-self: center;
+    margin: 0;
+}
+
+h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    align-self: center;
 }
 
 form{
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     margin-top: 1rem;
     padding: 1rem 3rem; 
-    width: 25%;
+    width: 90%;
     border: .1rem solid #6d6d6d;
 }
 
@@ -47,6 +117,7 @@ input{
     border-bottom: .1rem solid black;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.3rem;
+    color: #6d6d6d;
     padding: .5rem;
 }
 
@@ -54,9 +125,41 @@ input[type="date"]{
     border-bottom: .1rem solid black;
 }
 
+input:hover{
+    border: none;
+    border-bottom: .2rem solid black;
+}
+
+input:focus-visible{
+    outline: none;
+    border-bottom: .2rem solid black;
+}
+
+select{
+    border: none;
+    margin-top: .5rem;
+    background-color: white;
+    border-bottom: .1rem solid black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #6d6d6d;
+    font-size: 1.3rem;
+    padding: .5rem;
+}
+
+select:hover{
+    border: none;
+    border-bottom: .2rem solid black;
+}
+
+select:focus-visible{
+    outline: none;
+    border-bottom: .2rem solid black;
+}
+
 .estilos-botones{
-    width: 25%;
+    width: 90%;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -65,7 +168,7 @@ input[type="date"]{
 form button{
     margin-top: 1rem;
     margin-bottom: .5rem;
-    width: 98%;
+    width: 60%;
 }
 
 button{
@@ -83,14 +186,13 @@ button:hover{
 
 button:active{
     background-color: #f8f8f8;
-    border: .15rem solid #1b0c1a;
-    font-weight: 600; 
+    font-weight: 500; 
 }
 
 /*ERROR*/
 .error{
     display: none;
-    color: #993b65;
+    color: #dd270f;
     font-size: 13px;
     align-self: end;
 }
@@ -100,40 +202,88 @@ button:active{
 }
 
 /*ALTO CONTRASTE*/
+/*PALETAS COLORES: 
+FONDO   |  FORM   |  CLARO  |  BOTON  |  HOVER  | SELECTED
+18180f  |  3e4b20 |  d9beab |  d7780c |  e4912a |  ca4511
+435b4b  |  192c21 |  f0e0d1 |  de5a07 |  e26405 |  1b03900
+304050  |  192129 |  bec7ce |  F4B7AB |  D87D64 |  B2421F 
+313E35  | 162A22  |  FCEBD8 |  F7820F |  FBAD46 |  CF5704 
+305046   
+*/
 
 body.high-contrast{
-    background-color: #2d222f;
+    background-color: #393050;
+}
+
+body.high-contrast hr{
+    border: .1rem solid white;
+}
+
+body.high-contrast header{
+    background-color: #1d1929;
+    color: white;
+}
+
+body.high-contrast footer{
+    background-color: #1d1929;
+    color: white;
 }
 
 body.high-contrast h1{
-    color: #ffeae6
+    color: white;
+}
+
+body.high-contrast main{
+    background-color: #1d1929ce;
+    color: white;
 }
 
 body.high-contrast form{
-    background-color: #1b0c1a;
-    color: #ffeae6;
-    border: .1rem solid #ffeae6
+    background-color: #1d1929;
+    color: white;
+    border: .1rem solid white
 }
 
 body.high-contrast input{
-    background-color: #2d222f;
-    border-bottom: .1rem solid #ffeae6;
-    color: #ffeae6;
+    background-color: #1d1929;
+    border-bottom: .1rem solid white;
 }
 
+body.high-contrast input:hover{
+    border: none;
+    border-bottom: .2rem solid white;
+}
+
+body.high-contrast input:focus-visible{
+    outline: none;
+    border-bottom: .2rem solid white;
+}
+
+body.high-contrast input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+    
+}
+
+body.high-contrast select{
+    background-color: #1d1929;
+    border-bottom: .1rem solid white;
+}   
+
 body.high-contrast button{
-    background-color: #f7a3c8;
-    color: #1b0c1a;
-    border: .1rem solid #1b0c1a;
+    background-color: #D87D64;
+    color: #000000;
+    border: .1rem solid #000000;
 }
 
 body.high-contrast button:hover{
-    background-color: #eb6da5;
-    color: #1b0c1a;
-    border: .1rem solid #1b0c1a;
+    background-color: #F4B7AB;
+    color: #000000;
+    border: .1rem solid #000000;
 }
 
 body.high-contrast button:active{
-    background-color: #e45897;
+    background-color: #c05a3e;
+    color: white;
+    font-weight: 400;
 }
 

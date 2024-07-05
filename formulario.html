@@ -9,45 +9,70 @@
 </head>
 
 <body>
-    <h1>FORMULARIO</h1>
-    <form id="formulario" method="get">
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" minlength="3" maxlength="15" pattern="[A-Za-z\']+" required>
-            <span id="nombre-error" class="error">Campo obligatorio</span>
-        </div>
-        
-        <div>
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" minlength="3" maxlength="15" pattern="[A-Za-z\s]+" required>
-            <span id="apellido-error" class="error">Campo obligatorio</span>
-        </div>
-
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" minlength="15" maxlength="30" required>
-            <span id="email-error" class="error">Campo obligatorio</span>
-        </div>
-        
-        <div>
-            <label for="fecha_nac">Fecha Nacimiento:</label>
-            <input type="date" name="fecha_nac" id="fecha_nac" required>
-            <span id="fecha_nac-error" class="error">Campo obligatorio</span>
-        </div>
-
-        <div>
-            <label for="pais">País residencia:</label>
-            <input type="text" name="pais" id="pais" minlength="3" maxlength="15" pattern="[A-Za-z]" required>
-            <span id="pais-error" class="error">Campo obligatorio</span>
-        </div>
-        
-        <button type="submit">Enviar</button>
-    </form>
-
-    <div class="estilos-botones">
-        <button onclick="setClassicStyle()">Estilo Clásico</button>
-        <button onclick="setHighContrastStyle()">Estilo Alto Contraste</button>
-    </div>
+    <header>
+        <h1>CILSA — BOOTCAMP FULLSTACK</h1>
+    </header>
+    <hr>
     
+    <main>
+        <h2>EJERCICIO FORMULARIO:</h2>
+        <form id="formulario" method="get">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" minlength="3" maxlength="15" pattern="[A-Za-z\']+" required placeholder="tu nombre">
+                <span id="nombre-error" class="error">Campo obligatorio</span>
+            </div>
+            
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" minlength="3" maxlength="15" pattern="[A-Za-z\s]+" required placeholder="tu apellido">
+                <span id="apellido-error" class="error">Campo obligatorio</span>
+            </div>
+    
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" minlength="15" maxlength="30" required placeholder="tu email">
+                <span id="email-error" class="error">Campo obligatorio</span>
+            </div>
+            
+            <div>
+                <label for="fecha_nac">Fecha Nacimiento:</label>
+                <input type="date" name="fecha_nac" id="fecha_nac" required>
+                <span id="fecha_nac-error" class="error">Campo obligatorio</span>
+            </div>
+    
+            <div>
+                <label for="pais">País residencia:</label>
+                <select name="pais" id="pais">
+                    <option value="" hidden>Elige una opción</option>
+                    <option value="arg">Argentina</option>
+                    <option value="bol">Bolivia</option>
+                    <option value="bra">Brasil</option>
+                    <option value="chi">Chile</option>
+                    <option value="col">Colombia</option>
+                    <option value="ecu">Ecuador</option>
+                    <option value="guy">Guyana</option>
+                    <option value="per">Perú</option>
+                    <option value="sur">Surinam</option>
+                    <option value="uru">Uruguay</option>
+                    <option value="ven">Venezuela</option>
+                </select>
+                <span id="pais-error" class="error">Campo obligatorio</span>
+            </div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    
+        <div class="estilos-botones">
+            <button onclick="setClassicStyle()">Estilo Clásico</button>
+            <button onclick="setHighContrastStyle()">Estilo Alto Contraste</button>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Realizado por Yas'z Escobar Tomé</p>
+    </footer>
 </body>
 
+</html>
