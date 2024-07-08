@@ -19,13 +19,13 @@
         <form id="formulario" method="get">
             <div>
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" minlength="3" maxlength="15" pattern="[A-Za-z\']+" required placeholder="tu nombre">
+                <input type="text" name="nombre" id="nombre" minlength="3" maxlength="15" pattern="[A-Za-z']+" required placeholder="tu nombre">
                 <span id="nombre-error" class="error">Campo obligatorio</span>
             </div>
             
             <div>
                 <label for="apellido">Apellido:</label>
-                <input type="text" name="apellido" id="apellido" minlength="3" maxlength="15" pattern="[A-Za-z\s]+" required placeholder="tu apellido">
+                <input type="text" name="apellido" id="apellido" minlength="3" maxlength="15" pattern="[A-Za-z'\s]+" required placeholder="tu apellido">
                 <span id="apellido-error" class="error">Campo obligatorio</span>
             </div>
     
@@ -39,6 +39,7 @@
                 <label for="fecha_nac">Fecha Nacimiento:</label>
                 <input type="date" name="fecha_nac" id="fecha_nac" required>
                 <span id="fecha_nac-error" class="error">Campo obligatorio</span>
+                <span id="fecha_nac-invalida" class="error">Rango de fecha no válido.</span>
             </div>
     
             <div>

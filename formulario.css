@@ -34,7 +34,7 @@ header{
 }
 
 main{
-    margin-top: 2rem;
+    margin-top: 3rem;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -202,13 +202,9 @@ button:active{
 }
 
 /*ALTO CONTRASTE*/
-/*PALETAS COLORES: 
-FONDO   |  FORM   |  CLARO  |  BOTON  |  HOVER  | SELECTED
-18180f  |  3e4b20 |  d9beab |  d7780c |  e4912a |  ca4511
-435b4b  |  192c21 |  f0e0d1 |  de5a07 |  e26405 |  1b03900
-304050  |  192129 |  bec7ce |  F4B7AB |  D87D64 |  B2421F 
-313E35  | 162A22  |  FCEBD8 |  F7820F |  FBAD46 |  CF5704 
-305046   
+/*PALETA COLORES: 
+FONDO   |   MAIN   |  FORM   |  CLARO  |  BOTON  |  HOVER  |  ACTIVE
+393050  | 1d1929ce |  1d1929 |  white  |  D87D64 |  F4B7AB |  c05a3e
 */
 
 body.high-contrast{
