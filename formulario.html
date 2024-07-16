@@ -16,10 +16,9 @@
     </header>
     <hr>
     
-    <main class="container mw-50 pt-4">
+    <main class="container py-4">
         <h2>EJERCICIO FORMULARIO:</h2>
         <form class="row g-3 mt-3" id="formulario" method="get">
-            <div class="row">
                 <div class="col-12">
                     <label class="form-label" for="nombre">Nombre:</label>
                     <input class="form-control" type="text" id="nombre" placeholder="Ingresa tu nombre"  minlength="3" maxlength="15" pattern="[A-Za-z']+" required></input>
@@ -63,14 +62,13 @@
                     </select>
                     <span id="pais-error" class="error">Campo obligatorio</span>
                 </div>
-            </div>
 
             <button type="submit" style="width: 80%">Enviar</button>
         </form>
     
-        <div class="container estilos-botones">
-            <button onclick="setClassicStyle()">Estilo Clásico</button>
-            <button onclick="setHighContrastStyle()">Estilo Alto Contraste</button>
+        <div class="estilos-botones">
+            <button  onclick="setClassicStyle()">Estilo Clásico</button>
+            <button  onclick="setHighContrastStyle()">Estilo Alto Contraste</button>
         </div>
     </main>
 
