@@ -35,7 +35,7 @@ header{
 
 main{
     margin-top: 3rem;
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,8 +111,9 @@ label{
     font-size: 1.6rem; 
 }
 
-input{
+.form-control{
     border: none;
+    border-radius: 0;
     margin-top: .5rem;
     border-bottom: .1rem solid black;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -121,22 +122,24 @@ input{
     padding: .5rem;
 }
 
-input[type="date"]{
+.form-control input[type="date"]{
     border-bottom: .1rem solid black;
 }
 
-input:hover{
+.form-control:hover{
     border: none;
     border-bottom: .2rem solid black;
 }
 
-input:focus-visible{
+.form-control:focus-visible{
+    border:none;
     outline: none;
     border-bottom: .2rem solid black;
 }
 
-select{
+.form-select{
     border: none;
+    border-radius: 0;
     margin-top: .5rem;
     background-color: white;
     border-bottom: .1rem solid black;
@@ -146,12 +149,12 @@ select{
     padding: .5rem;
 }
 
-select:hover{
+.form-select:hover{
     border: none;
     border-bottom: .2rem solid black;
 }
 
-select:focus-visible{
+.form-select:focus-visible{
     outline: none;
     border-bottom: .2rem solid black;
 }
@@ -191,14 +194,14 @@ button:active{
 
 /*ERROR*/
 .error{
-    display: none;
-    color: #dd270f;
-    font-size: 13px;
-    align-self: end;
+    display: none !important;
+    color: #dd270f !important;
+    font-size: 13px !important;
+    align-self: end !important;
 }
 
 .show{
-    display: block;
+    display: block !important;
 }
 
 /*ALTO CONTRASTE*/
@@ -236,34 +239,41 @@ body.high-contrast main{
 
 body.high-contrast form{
     background-color: #1d1929;
-    color: white;
-    border: .1rem solid white
+    border: .1rem solid white;
 }
 
-body.high-contrast input{
+body.high-contrast .form-control{
     background-color: #1d1929;
     border-bottom: .1rem solid white;
 }
 
-body.high-contrast input:hover{
+body.high-contrast .form-control::placeholder{
+    color: #6d6d6d !important;
+}
+
+body.high-contrast .form-control:hover{
     border: none;
     border-bottom: .2rem solid white;
 }
 
-body.high-contrast input:focus-visible{
+body.high-contrast .form-control:focus-visible{
     outline: none;
     border-bottom: .2rem solid white;
 }
 
-body.high-contrast input[type="date"]::-webkit-calendar-picker-indicator{
+body.high-contrast .form-control[type="date"]::-webkit-calendar-picker-indicator{
     filter: invert(1);
-    
 }
 
-body.high-contrast select{
+body.high-contrast .form-select{
     background-color: #1d1929;
     border-bottom: .1rem solid white;
-}   
+}
+
+body.high-contrast .form-select:hover{
+    border: none;
+    border-bottom: .2rem solid white;
+}
 
 body.high-contrast button{
     background-color: #D87D64;
